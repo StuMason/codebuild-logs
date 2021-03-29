@@ -1,12 +1,26 @@
-name: "Python Container Action Template"
-description: "Get started with Python Container actions"
-author: "Jacob Tomlinson"
+name: "project-codebuild-logs"
+description: "Get last codebuild event logs for project"
+author: "Stu Mason"
 inputs:
+  AWS_KEY:
+    description: "AWS key"
+    default: null
+  AWS_SECRET:
+    description: "AWS Secret"
+    default: null
+  AWS_REGION:
+    description: "Codebuild Project AWS region"
+    default: null
+  CODEBUILD_PROJET_NAME:
+    description: "Codebuild Project name"
+    default: null
+
+
+
   myInput:
-    description: "Input to use"
-    default: "world"
+
 outputs:
-  myOutput:
+  logs:
     description: "Output from the action"
 runs:
   using: "docker"
