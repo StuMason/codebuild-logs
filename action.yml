@@ -14,14 +14,6 @@ inputs:
   CODEBUILD_PROJET_NAME:
     description: "Codebuild Project name"
     default: null
-
-
-
-  myInput:
-
-outputs:
-  logs:
-    description: "Output from the action"
 runs:
   using: "docker"
   image: "Dockerfile"

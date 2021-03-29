@@ -11,7 +11,7 @@ def main():
     project = os.environ["CODEBUILD_PROJET_NAME"]
 
     codebuild = boto3.client(
-        'codebuild', 
+        'codebuild',
         region_name=region,
         aws_access_key_id=key,
         aws_secret_access_key=secret,
