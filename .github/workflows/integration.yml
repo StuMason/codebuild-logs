@@ -7,6 +7,4 @@ jobs:
       - uses: actions/checkout@master
       - name: Self test
         id: selftest
-
-        # Put your action repo here
         uses: stumason/codebuild-logs@master
