@@ -2,16 +2,16 @@ name: "project-codebuild-logs"
 description: "Get last codebuild event logs for project"
 author: "Stu Mason"
 inputs:
-  AWS_KEY:
+  aws-access-key-id:
     description: "AWS key"
     default: null
-  AWS_SECRET:
+  aws-secret-access-key:
     description: "AWS Secret"
     default: null
-  AWS_REGION:
+  aws-region:
     description: "Codebuild Project AWS region"
     default: null
-  CODEBUILD_PROJET_NAME:
+  codebuild-project-name:
     description: "Codebuild Project name"
     default: null
 runs:

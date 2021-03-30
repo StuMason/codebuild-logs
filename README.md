@@ -3,12 +3,12 @@
 ```yaml
 steps:
 - uses: actions/checkout@master
-- name: Run action
-  id: myaction
-  uses: stumason/codebuild-logs@master
+- name: Run codebuild logs action
+  id: codebuild-event-logs
+  uses: stumason/codebuild-logs@v1
   with:
-    AWS_KEY: ${{ secrets.AWS_KEY }}
-    AWS_SECRET: ${{ secrets.AWS_SECRET }}
-    AWS_REGION: ${{ secrets.AWS_REGION }}
-    CODEBUILD_PROJET_NAME: ${{ secrets.PROJECT }}
+    aws-access-key-id: ${{ secrets.AWS_KEY }}
+    aws-secret-access-key: ${{ secrets.AWS_SECRET }}
+    aws-region: ${{ secrets.AWS_REGION }}
+    codebuild-project-name: ${{ secrets.PROJECT }}
 ```

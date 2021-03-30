@@ -5,10 +5,10 @@ from datetime import datetime
 
 
 def main():
-    key = os.environ["AWS_KEY"]
-    secret = os.environ["AWS_SECRET"]
-    region = os.environ["AWS_REGION"]
-    project = os.environ["CODEBUILD_PROJET_NAME"]
+    key = os.environ["aws-access-key-id"]
+    secret = os.environ["aws-secret-access-key"]
+    region = os.environ["aws-region"]
+    project = os.environ["codebuild-project-name"]
 
     codebuild = boto3.client(
         'codebuild',
