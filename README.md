@@ -6,7 +6,7 @@ steps:
 - name: Run codebuild logs action
   id: codebuild-event-logs
   uses: stumason/codebuild-logs@v1
-  with:
+  env:
     aws-access-key-id: ${{ secrets.AWS_KEY }}
     aws-secret-access-key: ${{ secrets.AWS_SECRET }}
     aws-region: ${{ secrets.AWS_REGION }}
