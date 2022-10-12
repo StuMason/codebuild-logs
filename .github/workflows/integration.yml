@@ -5,11 +5,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+
+      - name: AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_KEY }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
       - name: Self test
         id: selftest
         uses: stumason/codebuild-logs@master
         env:
-          aws-access-key-id: ${{ secrets.AWS_KEY }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET }}
           aws-region: ${{ secrets.AWS_REGION }}
           codebuild-project-name: ${{ secrets.PROJECT }}

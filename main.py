@@ -5,16 +5,12 @@ from datetime import datetime
 
 
 def main():
-    key = os.environ["aws-access-key-id"]
-    secret = os.environ["aws-secret-access-key"]
     region = os.environ["aws-region"]
     project = os.environ["codebuild-project-name"]
 
     codebuild = boto3.client(
         'codebuild',
-        region_name=region,
-        aws_access_key_id=key,
-        aws_secret_access_key=secret,
+        region_name=region
     )
 
     response = codebuild.list_builds_for_project(
@@ -26,9 +22,7 @@ def main():
 
     logs = boto3.client(
         'logs',
-        region_name=region,
-        aws_access_key_id=key,
-        aws_secret_access_key=secret,
+        region_name=region
     )
 
     response = logs.get_log_events(
